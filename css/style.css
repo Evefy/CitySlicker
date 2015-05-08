@@ -3,6 +3,19 @@
 	margin: 0 auto;
 }
 
+
+#pictures{
+	
+}
+
+#pictures li{
+	display: inline;;
+}
+
+.popUp ul{
+	display: inline;
+}
+
 .hide{
-	display:none;
+	display: none;
 }
