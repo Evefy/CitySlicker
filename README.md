@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Evefy
-gweb Team project
-An applcation that challenges your knowledge of the city you live in.
+yweb Team project
+An application that challenges your knowledge of the city you live in.
 =======
 # CitySlicker
 An app to measure your city-knowledge. How well do you know your city?
