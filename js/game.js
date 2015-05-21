@@ -61,10 +61,17 @@ var createAnswersFromData = function(data) {
     do {
       randomAnswer = data[Math.floor(Math.random() * data.length)];
       randomAnswers.push(randomAnswer);
+
+      $('#gameLogic').find('.gameLogicContent').append("<img class='img-resize' src='" + randomAnswers[0].src + "'>");
+
     } while(randomAnswers.length < 3);
 
     console.log(randomAnswers);
+
+
     // $('#gameLogic').find('.gameLogicContent').append("<img src='" + answers[randomAnswers].src + "'>");
+
+    // $('#gameLogic').find('.gameLogicContent').append("<img src='" + randomAnswers.src + "'>");
 
     return answers;
 }
