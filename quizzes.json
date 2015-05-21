@@ -28,6 +28,51 @@
         "id": "C",
         "src": "img/img6.jpg",
         "location" : "Image"
+    },
+    {
+        "id": "D",
+        "src": "img/img7.jpg",
+        "location" : "Loc D "
+    },
+    {
+        "id": "E",
+        "src": "img/img8.jpg",
+        "location" : "Loc E"
+    },
+    {
+        "id": "F",
+        "src": "img/img9.jpg",
+        "location" : "Loc F"
+    },
+    {
+        "id": "G",
+        "src": "img/img7.jpg",
+        "location" : "Loc G"
+    },
+    {
+        "id": "H",
+        "src": "img/img8.jpg",
+        "location" : "Loc H"
+    },
+    {
+        "id": "I",
+        "src": "img/img9.jpg",
+        "location" : "Loc I"
+    },
+    {
+        "id": "J",
+        "src": "img/img7.jpg",
+        "location" : "Loc J"
+    },
+    {
+        "id": "K",
+        "src": "img/img8.jpg",
+        "location" : "Loc K"
+    },
+    {
+        "id": "L",
+        "src": "img/img9.jpg",
+        "location" : "Loc L"
     }
 
 ]
