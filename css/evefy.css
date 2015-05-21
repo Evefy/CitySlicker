@@ -24,16 +24,43 @@ img {
 }
 .navigation {
 	margin-left: 300px;
-}
-nav {
+
 	display: flex;
 	width: 100%;
 	flex-direction: row;
     flex-wrap: nowrap;
     /*align-items: baseline;*/
-    background-color: turquoise;
+    background-color: none;
+    color: white;
+    /*-webkit-filter: blur(1px);*/
+
+}
+.nav-bg{
+	position: absolute;
+  top: -1em;
+  left: -5%;
+  background-image: url(header1.jpg);
+  width: 110%;
+  height: 12em;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(5px);
+}
+
+nav {
+
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    /*align-items: baseline;*/
+    /*background-image:url(header1.jpg) ;*/
+    background-repeat: no-repeat;
+    background-size: 100%;
     left: 300px;
-    height: 100px;
+    height: 150px;
+    background-position: left -300px;
+    color: white;
 }
 
 nav li a {
@@ -44,7 +71,8 @@ nav li a {
 	display: block;
 	padding-right: 4em;
 	padding-top: 30px;
-	color: #222;
+	color: #fff;
+
 }
 
 nav ul { 
@@ -54,6 +82,9 @@ nav ul {
 	flex-direction: row;
 	margin-top: 2em;
 	margin-bottom: 1em;
+	color: white;
+	position: relative;
+
 }
 nav li {
 	min-width: 100px;
@@ -67,13 +98,14 @@ nav li {
 	}
 	nav li a {
 		min-width: 150px;
-		font-family: black;
+		font-family: white;
 	}
 }
 
 nav li a:hover, 
 nav li a:focus {
 	color: orange;
+
 }
 
 
@@ -86,14 +118,18 @@ body {
 	background-color: rgb(219, 219, 217);
 	background-size: cover;
 	width: 100%;
+	color:red;
 }
 
 h1 {
 	font-family: phosphate;
 	font-size: 50px;
 	text-align: center;
+	color:red;
 	margin-top: 100px;
 	padding-bottom: 50px;
+	
+    
 }
 
 h2 {
@@ -126,6 +162,7 @@ h2 {
  height: 80px;
  width: 80px;
  background: yellow;
+ color: red;
 }
 #star12:before {
  -webkit-transform: rotate(30deg);
