@@ -1,0 +1,168 @@
+
+html {
+	margin: 0;
+	font-size: 200%
+	text-align: center;
+}
+
+img {
+	max-width: 40%;
+	max-height: 60%;
+	display: flex;
+	width: 100%;
+	padding: 15px 0 0 0;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    top: 100px;
+}
+.wayinthere {
+	height: 72px;
+	width: 150px;
+	position: absolute;
+	margin-top: -80px;
+	margin-left: 40px;
+}
+.navigation {
+	margin-left: 300px;
+}
+nav {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    /*align-items: baseline;*/
+    background-color: turquoise;
+    left: 300px;
+    height: 100px;
+}
+
+nav li a {
+	flex: 1;
+	align-self: center;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	padding-right: 4em;
+	padding-top: 30px;
+	color: #222;
+}
+
+nav ul { 
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+nav li {
+	min-width: 100px;
+	flex-grow: 1;
+	font-size: 20px;
+}
+
+@media (max-width: 500px) {
+	nav {
+        flex-wrap: wrap;
+	}
+	nav li a {
+		min-width: 150px;
+		font-family: black;
+	}
+}
+
+nav li a:hover, 
+nav li a:focus {
+	color: orange;
+}
+
+
+body {
+	margin: 0;
+	position: absolute;
+	font-family: "marker felt";
+	display: block;
+	background-repeat: no-repeat;
+	background-color: rgb(219, 219, 217);
+	background-size: cover;
+	width: 100%;
+}
+
+h1 {
+	font-family: phosphate;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 100px;
+	padding-bottom: 50px;
+}
+
+h2 {
+	font-family: georgia;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 60px;
+	padding-bottom: 50px;
+}
+#pictures {
+	display: inline-flex;
+	margin-left: 580px;
+}
+
+#star12 {
+ background: yellow;
+ width: 80px;
+ height: 80px;
+ position: relative;
+ margin-top: -35px;
+}
+#star12:before, #star12:after {
+ content: "Play now!";
+ text-align: center;
+ line-height: 90px;
+ position: absolute;
+ writing-mode: vertical-rl;
+ top: 0;
+ left: 0;
+ height: 80px;
+ width: 80px;
+ background: yellow;
+}
+#star12:before {
+ -webkit-transform: rotate(30deg);
+ -moz-transform: rotate(30deg);
+ -ms-transform: rotate(30deg);
+ -o-transform: rotate(30deg);
+}
+#star12:after {
+ -webkit-transform: rotate(-30deg);
+ -moz-transform: rotate(-30deg);
+ -ms-transform: rotate(-30deg);
+ -o-transform: rotate(-30deg);
+}
+
+.pics {
+	height: 100px;
+	width: 100px;
+	margin: 2em;
+	flex-grow: 1;
+}
+
+
+.pics:hover, 
+.pics:focus {
+	border: 5px orange solid;
+	padding: 0;
+}
+
+.correct {
+	background-color: orange;
+
+
+}
+
+.incorrect {
+
+}
+
+
+

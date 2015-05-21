@@ -1,0 +1,27 @@
+[
+	{
+		id: "btp";
+		isCorrect: true;
+		img: "img/file_name"
+
+	},
+	{
+		id: "briewood";
+		isCorrect: false;
+		img: "img/file_name"
+
+	},
+	{
+		id: "wondo";
+		isCorrect: false;
+		img: "img/file_name"
+
+	},
+
+]
+
+for (each quizes){
+	if(quizItem.isCorrect)
+		$("selector").on(isCorrect)
+	else("").on(isWrong)
+}
