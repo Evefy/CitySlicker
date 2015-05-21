@@ -1,0 +1,98 @@
+
+html {
+	margin: 0;
+	font-size: 200%
+	text-align: center;
+}
+
+img {
+	max-width: 40%;
+	max-height: 60%;
+	display: flex;
+	width: 100%;
+	padding: 15px 0 0 0;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    top: 100px;
+}
+.wayinthere {
+	
+
+}
+nav {
+	display: flex;
+	width: 100%;
+	padding: 45px 0 0 0;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    /*align-items: baseline;*/
+    background-color: turquoise;
+}
+
+nav li a {
+	flex: 1;
+	align-self: center;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	padding: 2em;
+	color: #222;
+}
+
+nav ul { 
+	list-style-type: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0;
+	margin-bottom: 1em;
+}
+nav li {
+	min-width: 100px;
+	flex-grow: 1;
+	font-size: 1em;
+}
+
+@media (max-width: 500px) {
+	nav {
+        flex-wrap: wrap;
+	}
+	nav li a {
+		min-width: 150px;
+		font-family: black;
+	}
+}
+
+nav li a:hover, 
+nav li a:focus {
+	color: purple;
+}
+
+
+body {
+	margin: 0;
+	position: absolute;
+	font-family: "lobster 1.3";
+	display: block;
+	background-repeat: no-repeat;
+	background-color: khaki;
+	background-size: cover;
+	width: 100%;
+}
+
+.home p {
+	font-family: phosphate;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 100px;
+	padding-bottom: 50px;
+}
+
+.play p {
+	font-family: georgia;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 100px;
+	padding-bottom: 50px;
+}
