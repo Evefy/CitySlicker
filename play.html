@@ -8,33 +8,46 @@
 
 	<body>
 		
+<!--// var rand = answer[Math.floor(Math.random() * answer.length)];-->
 
- 		<div class="questions">
-			<h2>This special piece located at Beld Triangle Park located?</h2>
+ 		<div class="questionArea">
+			<h2>This special piece is located at Beld Triangle Park?</h2>
 		</div>
 		
-		<div id="pictures">
+<!-- 		<div id="pictures">
 			<ul>
 				<li><img class="picture img-resize" src="img/img1.jpg" data-id="briewood"></li>
 				<li><img class="picture img-resize" src="img/img2.jpg" data-id="btp"></li>
 				<li><img class="picture img-resize" src="img/img3.jpg" data-id="wando"></li>
 			</ul>		
-		</div>		
-		
-		<button class="next">Next </button>
+		</div> -->
+
+		<div class="quizArea">
+			<h2>Answer Messages goes below:</h2>
+
+		</div>
+
 
 		<div class="answers">
- 			<p class="answer1"></p>
- 			<p class="answer2"></p>
- 			<p class="answer3"></p>
+
 		</div>
 
 		<div id="popUp">
+			<h2>Did you get it right:  </h2>
 			<ul>
 				<li class="hide correct"><h2>Yeah, you got that right!</h2></li>
-				<li class="hide incorrect"><h2>Maybe next time</h2></li>
+				<li class="hide incorrect"><h2>Sorry, maybe next time</h2></li>
 			</ul>
 		</div>
+
+		<div id="gameLogic">
+			<h2>Game Logic Here </h2>
+			<div class="gameLogicContent" style="background-color:red; padding: 50px">
+				
+			</div>
+		</div>	
+		
+		<button class="next">Next </button>
 
 
 		<div class="points">
@@ -43,7 +56,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>	
-	<script src="js/game.js"></script>    
+	<script src="js/game.js"></script>
+	<!--<script src="js/gameLogic.js"></script> -->   
 	</body>
 
 

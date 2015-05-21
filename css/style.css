@@ -1,7 +1,7 @@
 .img-resize{
 	width: 250px;
 	height: 250px;
-	margin: 0 auto;
+	margin: 0 5px;
 }
 
 
@@ -19,4 +19,10 @@
 
 .hide{
 	display: none;
+}
+
+.quizArea img {
+	width: 250px;
+	height: 250px;
+	margin: 0 5px;
 }
