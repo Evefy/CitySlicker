@@ -4,9 +4,26 @@ var points = 0;
 
 var correctAnswerListener = function() {
   $('#popUp').find(".correct").toggleClass("hide");
+  $(".quizArea").empty();
   points++;
-}	
+};
+	
+var nextQuestion = function (){
+  $('#popUp').find(".correct").toggleClass("hide");
+  $.ajax({
+  type: "GET",
+  url: "quizzes.json",
+  success: function(data) {
+    var take = data["level"+points+""];
 
+    var answers = createAnswersFromData(take);
+    addAnswersToScreen(answers);
+  }
+});
+};
+$(".next").on('click', function(){
+  nextQuestion();
+});
 var wrongAnswerListener = function(){
   $('#popUp').find(".incorrect").toggleClass("hide");
 }
@@ -59,9 +76,11 @@ $.ajax({
   type: "GET",
   url: "quizzes.json",
   success: function(data) {
-    var answers = createAnswersFromData(data);
+    var take = data["level"+points+""];
+
+    var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
   }
-})
+});
 
 });

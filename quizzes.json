@@ -1,4 +1,4 @@
-[
+{ "level0": [
     {
         "id": "briewood",
         "src": "img/img1.jpg",
@@ -9,6 +9,12 @@
         "src": "img/img2.jpg",
         "location" : "Beld Triangle Park"
     },
+    {
+        "id": "wondo",
+        "src": "img/img3.jpg",
+        "location" : "Wondo"
+    }],
+    "level1": [
     {
         "id": "wondo",
         "src": "img/img3.jpg",
@@ -32,3 +38,4 @@
 
 ]
 
+}
