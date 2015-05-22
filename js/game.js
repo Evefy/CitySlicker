@@ -44,32 +44,48 @@ var addAnswersToScreen = function(answers) {
 }
 
 var createAnswersFromData = function(data) {
+  var answers = [
+    {
+     "id": "briewood",
+     "src": "img/img1.jpg",
+     "location" : "Briewood Neighboorhood",
+     "isCorrect": false
+    },
+    {
+     "id": "btp",
+     "src": "img/img2.jpg",
+     "location" : "Beld Triangle Park",
+     "isCorrect": true
+    },
+    {
+     "id": "wondo",
+     "src": "img/img3.jpg",
+     "location" : "Wondo",
+     "isCorrect": false
+    }
+  ];
+
     var randomAnswers = [];
     var randomAnswer;
-    var randomIndex;
 
-    //want to grab the first random one and make that one isCorrect !!
-    //and then generate the questions along with that one !!
+    //want to grab the first random one and make that one isCorrect
+    //and then generate the questions along with that one
 
-    //1.  No duplicates 
-    //2.  add isCorrect !!
+    //1.  No duplicates
+    //2.  add isCorrect
     //3.  splicing used array object
 
     do {
-      do {//generate random indicies 
-        randomIndex = Math.floor(Math.random() * data.length);
-        randomAnswer = data[randomIndex];
-        randomAnswer["isCorrect"] = false;
-      } while(randomAnswers.indexOf(randomAnswer) >= 0); //
-      randomAnswers.push(randomAnswer); //push random answer to array
-      //$('#gameLogic').find('.gameLogicContent').append("<img class='img-resize' src='" + randomAnswers[randomAnswers.length - 1].src + "'>");
-    } while(randomAnswers.length < 3);//
+      randomAnswer = data[Math.floor(Math.random() * data.length)];
+      randomAnswers.push(randomAnswer);
+      $('#gameLogic').find('.gameLogicContent').append("<img class='img-resize' src='" + randomAnswers[0].src + "'>");
 
-    //after 3 places are generated, add isCorrect property to a random object
-    randomAnswers[Math.floor(Math.random() * randomAnswers.length)].isCorrect = true;
-    // $('#gameLogic').find('.gameLogicContent').append("<img src='" + answers[randomAnswers].src + "'>");
+    } while(randomAnswers.length < 3);
+
     console.log(randomAnswers);
-    return randomAnswers;
+    // $('#gameLogic').find('.gameLogicContent').append("<img src='" + answers[randomAnswers].src + "'>");
+
+    return answers;
 }
 
 $.ajax({

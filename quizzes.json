@@ -23,17 +23,17 @@
     {
         "id": "A",
         "src": "img/img4.jpg",
-        "location" : "Ella's "
+        "location" : "Briewood Neighboorhood"
     },
     {
         "id": "B",
         "src": "img/img5.jpg",
-        "location" : "Kohl's"
+        "location" : "Beld Triangle Park"
     },
     {
         "id": "C",
         "src": "img/img6.jpg",
-        "location" : "Image 6"
+        "location" : "Wondo"
     }
 
 ]
