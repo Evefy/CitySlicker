@@ -37,6 +37,7 @@ var addAnswersToScreen = function(answers) {
     if (answers[index].isCorrect) {
       $(".questionArea").find("h2").text("This special piece is located at " + answers[index].location + "?")
     }
+    var points;
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
 
@@ -63,7 +64,7 @@ var createAnswersFromData = function(data) {
       } while(randomAnswers.indexOf(randomAnswer) >= 0); //
       randomAnswers.push(randomAnswer); //push random answer to array
       //$('#gameLogic').find('.gameLogicContent').append("<img class='img-resize' src='" + randomAnswers[randomAnswers.length - 1].src + "'>");
-    } while(randomAnswers.length < 3);//
+    } while(randomAnswers.length < 3 && (randomAnswers.id != randomAnswers.id));//
 
     //after 3 places are generated, add isCorrect property to a random object
     randomAnswers[Math.floor(Math.random() * randomAnswers.length)].isCorrect = true;
