@@ -3,15 +3,13 @@ $(document).ready(function() {
 var points = 0;  
 
 var correctAnswerListener = function() {
-  $('#popUp').find(".correct").toggleClass("hide");
   $("#modal-content,#modal-background").toggleClass("active");
   $(".quizArea").empty();
-  $(".questionArea").empty();
+  $(".questionArea h1").empty();
   points++;
 };
   
 var nextQuestion = function (){
-  $('#popUp').find(".correct").toggleClass("hide");
   $("#modal-content,#modal-background").toggleClass("active");
   $.ajax({
   type: "GET",
