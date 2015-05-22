@@ -56,8 +56,6 @@ nav li {
 }
 
 
-
-
 .img-resize{
 	width: 250px;
 	height: 250px;
@@ -87,16 +85,28 @@ nav li {
 }
 
 .questionArea {
-	margin-left: 25vw;
-	margin-top: 5%;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .quizArea img {
 	width: 250px;
 	height: 250px;
-	margin: 10px 5px;
-	border: 5px solid #fff;
+	margin: 30px 20px;
+	border: 8px solid #fff;
+	cursor: pointer;
 }
+
+.levelArea{
+  font-size: 26px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.pointsArea{
+  margin: 10px 10px;
+}
+
 /*Modal stuff brah*/
 
 #modal-close {

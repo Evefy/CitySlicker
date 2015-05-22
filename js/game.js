@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
-var points = 0;  
+var points = 0; 
+
 
 var correctAnswerListener = function() {
   $("#modal-content,#modal-background").toggleClass("active");
@@ -40,8 +41,9 @@ var addAnswersToScreen = function(answers) {
     }
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
-
   }
+      $('.level').append(points+1);
+
 }
 
 var createAnswersFromData = function(data) {
