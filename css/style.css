@@ -1,3 +1,6 @@
+body {
+	height: 100%;
+}
 .img-resize{
 	width: 250px;
 	height: 250px;
@@ -19,6 +22,15 @@
 
 .hide{
 	display: none;
+}
+.quizArea {
+	margin-left: 25vw;
+	margin-top: 20vh;
+}
+
+.questionArea {
+	margin-left: 25vw;
+	margin-top: 5%;
 }
 
 .quizArea img {
