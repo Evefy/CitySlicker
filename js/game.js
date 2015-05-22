@@ -1,13 +1,15 @@
 $(document).ready(function() {
   
-var points = 0; 
+var points = 0;
+var level = points; 
+var lvlPt = 0;
 
 
 var correctAnswerListener = function() {
   $("#modal-content,#modal-background").toggleClass("active");
   $(".quizArea").empty();
   $(".questionArea h1").empty();
-  points++;
+    points++;
 };
   
 var nextQuestion = function (){
@@ -26,6 +28,7 @@ var nextQuestion = function (){
 $(".next").on('click', function(){
   nextQuestion();
 });
+
 var wrongAnswerListener = function(){
   $('#popUp').find(".incorrect").toggleClass("hide");
 }
@@ -42,7 +45,8 @@ var addAnswersToScreen = function(answers) {
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
   }
-      $('.level').append(points+1);
+    $('.level').append(level+1);
+    $('.points').append(lvlPt);
 
 }
 
@@ -79,8 +83,7 @@ $.ajax({
   type: "GET",
   url: "../quizzes.json",
   success: function(data) {
-    var take = data["level"+points+""];
-
+    var take = data["level"+level+""];
     var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
   }
