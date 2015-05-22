@@ -1,5 +1,12 @@
 body {
-	height: 100%;
+	margin: 0;
+	position: absolute;
+	font-family: "marker felt";
+	display: block;
+	background-repeat: no-repeat;
+	background-color: rgb(219, 219, 217);
+	background-size: cover;
+	width: 100%;
 }
 
 .wayinthere {
@@ -76,6 +83,7 @@ nav li {
 .quizArea {
 	margin: 0 auto;
   	text-align: center;
+  	background-color: lightcoral;
 }
 
 .questionArea {
@@ -86,7 +94,8 @@ nav li {
 .quizArea img {
 	width: 250px;
 	height: 250px;
-	margin: 0 5px;
+	margin: 10px 5px;
+	border: 5px solid #fff;
 }
 /*Modal stuff brah*/
 
