@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
 	
 var points = 0;
 var data = [];
@@ -18,13 +19,38 @@ var newQuiz = function() {
   addAnswersToScreen(answers);
   quizNumber++;
 }
+=======
+  
+var points = 0;  
+>>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
 
 var correctAnswerListener = function() {
   $('#popUp').find(".correct").toggleClass("hide");
+  $(".quizArea").empty();
   points++;
+<<<<<<< HEAD
   newQuiz();
 }	
+=======
+};
+  
+var nextQuestion = function (){
+  $('#popUp').find(".correct").toggleClass("hide");
+  $.ajax({
+  type: "GET",
+  url: "quizzes.json",
+  success: function(data) {
+    var take = data["level"+points+""];
+>>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
 
+    var answers = createAnswersFromData(take);
+    addAnswersToScreen(answers);
+  }
+});
+};
+$(".next").on('click', function(){
+  nextQuestion();
+});
 var wrongAnswerListener = function(){
   $('#popUp').find(".incorrect").toggleClass("hide");
   newQuiz;
@@ -39,7 +65,6 @@ var addAnswersToScreen = function(answers) {
     if (answers[index].isCorrect) {
       $(".questionArea").find("h2").text("This special piece is located at " + answers[index].location + "?")
     }
-    var points;
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
 
@@ -89,10 +114,18 @@ var generateAnswers = function() {
 $.ajax({
   type: "GET",
   url: "quizzes.json",
+<<<<<<< HEAD
   success: function(newData) {
     data = newData;
     newQuiz();
+=======
+  success: function(data) {
+    var take = data["level"+points+""];
+
+    var answers = createAnswersFromData(take);
+    addAnswersToScreen(answers);
+>>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
   }
-})
+});
 
 });
