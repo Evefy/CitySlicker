@@ -16,17 +16,24 @@ img {
     top: 100px;
 }
 .wayinthere {
-	
-
+	height: 72px;
+	width: 150px;
+	position: absolute;
+	margin-top: -80px;
+	margin-left: 40px;
+}
+.navigation {
+	margin-left: 300px;
 }
 nav {
 	display: flex;
 	width: 100%;
-	padding: 45px 0 0 0;
 	flex-direction: row;
     flex-wrap: nowrap;
     /*align-items: baseline;*/
     background-color: turquoise;
+    left: 300px;
+    height: 100px;
 }
 
 nav li a {
@@ -35,23 +42,23 @@ nav li a {
 	margin: auto;
 	text-decoration: none;
 	display: block;
-	padding: 2em;
+	padding-right: 4em;
+	padding-top: 30px;
 	color: #222;
 }
 
 nav ul { 
 	list-style-type: none;
-	padding-left: 0;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	margin: 0;
+	margin-top: 2em;
 	margin-bottom: 1em;
 }
 nav li {
 	min-width: 100px;
 	flex-grow: 1;
-	font-size: 1em;
+	font-size: 20px;
 }
 
 @media (max-width: 500px) {
@@ -66,22 +73,22 @@ nav li {
 
 nav li a:hover, 
 nav li a:focus {
-	color: purple;
+	color: orange;
 }
 
 
 body {
 	margin: 0;
 	position: absolute;
-	font-family: "lobster 1.3";
+	font-family: "marker felt";
 	display: block;
 	background-repeat: no-repeat;
-	background-color: khaki;
+	background-color: rgb(219, 219, 217);
 	background-size: cover;
 	width: 100%;
 }
 
-.home p {
+h1 {
 	font-family: phosphate;
 	font-size: 50px;
 	text-align: center;
@@ -89,10 +96,110 @@ body {
 	padding-bottom: 50px;
 }
 
-.play p {
+h2 {
 	font-family: georgia;
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 60px;
 	padding-bottom: 50px;
+}
+#pictures {
+	display: inline-flex;
+	margin-left: 580px;
+}
+
+#star12 {
+ background: yellow;
+ width: 80px;
+ height: 80px;
+ position: relative;
+ margin-top: -35px;
+}
+#star12:before, #star12:after {
+ content: "Play now!";
+ text-align: center;
+ line-height: 90px;
+ position: absolute;
+ writing-mode: vertical-rl;
+ top: 0;
+ left: 0;
+ height: 80px;
+ width: 80px;
+ background: yellow;
+}
+#star12:before {
+ -webkit-transform: rotate(30deg);
+ -moz-transform: rotate(30deg);
+ -ms-transform: rotate(30deg);
+ -o-transform: rotate(30deg);
+}
+#star12:after {
+ -webkit-transform: rotate(-30deg);
+ -moz-transform: rotate(-30deg);
+ -ms-transform: rotate(-30deg);
+ -o-transform: rotate(-30deg);
+}
+
+.pics {
+	height: 100px;
+	width: 100px;
+	margin: 2em;
+	flex-grow: 1;
+}
+
+
+.pics:hover, 
+.pics:focus {
+	border: 5px orange solid;
+	padding: 0;
+}
+
+.correct {
+	background-color: orange;
+
+
+}
+
+.incorrect {
+
+}
+
+/*Modal Stuff brah*/
+
+#modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .50;
+    -webkit-opacity: .5;
+    -moz-opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 1000;
+}
+
+#modal-content {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0 0 20px 0 #222;
+    -webkit-box-shadow: 0 0 20px 0 #222;
+    -moz-box-shadow: 0 0 20px 0 #222;
+    display: none;
+    height: 240px;
+    left: 50%;
+    margin: -120px 0 0 -160px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    width: 320px;
+    z-index: 1000;
+}
+
+#modal-background.active, #modal-content.active {
+    display: block;
 }
