@@ -1,0 +1,136 @@
+body {
+	height: 100%;
+}
+
+.wayinthere {
+	height: 72px;
+	width: 150px;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: 40px;
+}
+.navigation {
+	margin-left: 300px;
+}
+nav {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    /*align-items: baseline;*/
+    background-color: turquoise;
+    left: 300px;
+    height: 100px;
+}
+
+nav li a {
+	flex: 1;
+	align-self: center;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	padding-right: 4em;
+	padding-top: 30px;
+	color: #222;
+}
+
+nav ul { 
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+nav li {
+	min-width: 100px;
+	flex-grow: 1;
+	font-size: 20px;
+}
+
+
+
+
+.img-resize{
+	width: 250px;
+	height: 250px;
+	margin: 0 5px;
+}
+
+
+#pictures{
+	
+}
+
+#pictures li{
+	display: inline;;
+}
+
+.popUp ul{
+	display: inline;
+}
+
+.hide{
+	display: none;
+}
+.quizArea {
+	margin-left: 25vw;
+	margin-top: 20vh;
+}
+
+.questionArea {
+	margin-left: 25vw;
+	margin-top: 5%;
+}
+
+.quizArea img {
+	width: 250px;
+	height: 250px;
+	margin: 0 5px;
+}
+/*Modal stuff brah*/
+
+#modal-close {
+	margin-left: 250px;
+	margin-top: 90px;
+	font-size: 24px;
+	border-radius: 40px;
+}
+
+#modal-background {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	opacity: .50;
+	-webkit-opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity=50);
+	z-index: 1000;
+}
+
+#modal-content {
+	background-color: white;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0 0 20px 0 #222;
+	-webkit-box-shadow: 0 0 20px 0 #222;
+	-moz-box-shadow: 0 0 20px 0 #222;
+	display: none;
+	height: 240px;
+	left: 50%;
+	margin: -120px 0 0 -160px;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	width: 320px;
+	z-index: 1000;
+}
+
+#modal-background.active, #modal-content.active {
+	display: block;
+}
