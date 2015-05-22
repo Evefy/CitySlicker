@@ -13,7 +13,7 @@ var difficulty = 0;
 
 var newQuiz = function() {
   var answers;
-  clearScreen();
+  // clearScreen();
   answers = generateAnswers();
   addAnswersToScreen(answers);
   quizNumber++;
