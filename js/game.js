@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
 var points = 0;
-var level = points; 
+var level = 0; 
 var lvlPt = 0;
 
 

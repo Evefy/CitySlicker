@@ -13,27 +13,58 @@
         "id": "wondo",
         "src": "../img/img3.jpg",
         "location" : "Wondo"
+    },
+    {
+        "id": "wondo",
+        "src": "../img/img12.jpg",
+        "location" : "Loc 12"
+    },
+    {
+        "id": "wondo",
+        "src": "../img/img13.jpg",
+        "location" : "Loc 13"
     }],
     "level1": [
     {
         "id": "wondo",
-        "src": "../img/img3.jpg",
+        "src": "../img/img4.jpg",
         "location" : "Wondo"
     },
     {
         "id": "A",
-        "src": "../img/img4.jpg",
+        "src": "../img/img5.jpg",
         "location" : "Loc A"
     },
     {
         "id": "B",
-        "src": "../img/img5.jpg",
+        "src": "../img/img6.jpg",
         "location" : "Loc B"
     },
     {
         "id": "C",
-        "src": "../img/img6.jpg",
+        "src": "../img/img7.jpg",
         "location" : "Loc C"
+    }],
+    "level2": [
+    {
+        "id": "wondo",
+        "src": "../img/img8.jpg",
+        "location" : "Loc D"
+    },
+    {
+        "id": "A",
+        "src": "../img/img9.jpg",
+        "location" : "Loc E"
+    },
+    {
+        "id": "B",
+        "src": "../img/img10.jpg",
+        "location" : "Loc F"
+    },
+    {
+        "id": "C",
+        "src": "../img/img11.jpg",
+        "location" : "Loc G"
     }]
 
 }
