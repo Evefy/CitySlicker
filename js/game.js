@@ -1,47 +1,22 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-	
-var points = 0;
-var data = [];
-var quizNumber = 0;
-var usedIndices = [];
-var difficulty = 0;
-
-// var clearScreen() {
-//   //jquery to remove things from screen
-  
-// }
-
-var newQuiz = function() {
-  var answers;
-  // clearScreen();
-  answers = generateAnswers();
-  addAnswersToScreen(answers);
-  quizNumber++;
-}
-=======
   
 var points = 0;  
->>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
 
 var correctAnswerListener = function() {
   $('#popUp').find(".correct").toggleClass("hide");
+  $("#modal-content,#modal-background").toggleClass("active");
   $(".quizArea").empty();
   points++;
-<<<<<<< HEAD
-  newQuiz();
-}	
-=======
 };
   
 var nextQuestion = function (){
   $('#popUp').find(".correct").toggleClass("hide");
+  $("#modal-content,#modal-background").toggleClass("active");
   $.ajax({
   type: "GET",
-  url: "quizzes.json",
+  url: "../quizzes.json",
   success: function(data) {
     var take = data["level"+points+""];
->>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
 
     var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
@@ -53,7 +28,6 @@ $(".next").on('click', function(){
 });
 var wrongAnswerListener = function(){
   $('#popUp').find(".incorrect").toggleClass("hide");
-  newQuiz;
 }
 
 var createAnswer = function(data){
@@ -71,11 +45,10 @@ var addAnswersToScreen = function(answers) {
   }
 }
 
-var generateAnswers = function() {
+var createAnswersFromData = function(data) {
     var randomAnswers = [];
     var randomAnswer;
     var randomIndex;
-    var correctIndex;
 
     //want to grab the first random one and make that one isCorrect !!
     //and then generate the questions along with that one !!
@@ -85,7 +58,7 @@ var generateAnswers = function() {
     //3.  splicing used array object
 
     do {
-      do {//generate random indicies desirably 
+      do {//generate random indicies 
         randomIndex = Math.floor(Math.random() * data.length);
         randomAnswer = data[randomIndex];
         randomAnswer["isCorrect"] = false;
@@ -96,35 +69,19 @@ var generateAnswers = function() {
 
     //after 3 places are generated, add isCorrect property to a random object
     randomAnswers[Math.floor(Math.random() * randomAnswers.length)].isCorrect = true;
-
-
-    //Checking for duplicates in usedIndicies
-    /*
-    do{
-      correctIndex = Math.floor(Math.random() * randomAnswers.length);
-    } while(0 < usedIndices.indexOf(correctIndex))
-
-    randomAnswers[correctIndex].isCorrect = true;
-    randomAnswers.push(usedIndices);*/
-
+    // $('#gameLogic').find('.gameLogicContent').append("<img src='" + answers[randomAnswers].src + "'>");
     console.log(randomAnswers);
     return randomAnswers;
 }
 
 $.ajax({
   type: "GET",
-  url: "quizzes.json",
-<<<<<<< HEAD
-  success: function(newData) {
-    data = newData;
-    newQuiz();
-=======
+  url: "../quizzes.json",
   success: function(data) {
     var take = data["level"+points+""];
 
     var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
->>>>>>> 0a82240e0cd057afb0ccf24a9142b6617958a785
   }
 });
 
