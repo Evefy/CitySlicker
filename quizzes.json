@@ -2,7 +2,8 @@
     {
         "id": "briewood",
         "src": "img/img1.jpg",
-        "location" : "Briewood Neighboorhood"
+        "location" : "Briewood Neighboorhood",
+        "difficulty" : "1"
     },
     {
         "id": "btp",
