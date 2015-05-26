@@ -39,7 +39,7 @@ img {
 	position: absolute;
   top: -1em;
   left: -5%;
-  background-image: url(header1.jpg);
+  /*background-image: url(header1.jpg);*/
   width: 110%;
   height: 12em;
   background-size: cover;
@@ -115,17 +115,20 @@ body {
 	font-family: "cursive";
 	display: block;
 	background-repeat: no-repeat;
-	background-color: rgb(219, 219, 217);
+	/*background-image: url(../img/map3.jpg);
+	/*background-color: rgb(219, 219, 217);*/
+	background-image: url(header1.jpg);
 	background-size: cover;
 	width: 100%;
 	color:red;
+
 }
 
 h1 {
 	font-family: phosphate;
 	font-size: 50px;
 	text-align: center;
-	color:red;
+	color: rgba(33, 70, 220, 0.98);
 	margin-top: 100px;
 	padding-bottom: 50px;
 	
