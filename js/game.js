@@ -10,6 +10,7 @@ var correctAnswerListener = function() {
   $(".quizArea").empty();
   $(".questionArea h1").empty();
     points++;
+    console.log(points);
 };
   
 var nextQuestion = function (){
@@ -19,11 +20,10 @@ var nextQuestion = function (){
   url: "../quizzes.json",
   success: function(data) {
     var take = data["level"+points+""];
-
     var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
   }
-});
+  });
 };
 $(".next").on('click', function(){
   nextQuestion();
@@ -40,7 +40,7 @@ var createAnswer = function(data){
 var addAnswersToScreen = function(answers) {
   for (index in answers) {
     if (answers[index].isCorrect) {
-      $(".questionArea").find("h2").text("This special piece is located at >> " + answers[index].location + " << ?")
+      $(".questionArea").find("h2").text("This special piece is located at >> " + answers[index].location + " << ?");
     }
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
