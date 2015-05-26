@@ -44,7 +44,7 @@ img {
   height: 12em;
   background-size: cover;
   background-position: center;
-  -webkit-filter: blur(5px);
+  -webkit-filter: blur(2px);
 }
 
 nav {
@@ -112,7 +112,7 @@ nav li a:focus {
 body {
 	margin: 0;
 	position: absolute;
-	font-family: "marker felt";
+	font-family: "cursive";
 	display: block;
 	background-repeat: no-repeat;
 	background-color: rgb(219, 219, 217);
