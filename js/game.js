@@ -1,54 +1,92 @@
 $(document).ready(function() {
-	
-	var points = 0;
-
-	var isCorrectAnswer = function() {
-		$('#popUp').find(".correct").removeClass("hide");
-		points++;
-	}	
-
-	var isWrongAnswer = function(){
-		$('#popUp').find(".incorrect").removeClass("hide");
-	}
-
-	$('#pictures').on('click', '[data-id="btp"]', isCorrectAnswer);
-	$('#pictures').on('click', '[data-id="briewood"]', isWrongAnswer);
-	$('#pictures').on('click', '[data-id="wando"]', isWrongAnswer); 
- 	/*
-		var picture = $(this);
-		var picId = picture.data("id");
-
-		var correctAnswer = "btp";
-		
+  
+var points = 0;
+var level = 0; 
+var lvlPt = 0;
 
 
-		//If img of li is clicked
+var correctAnswerListener = function() {
+  $("#modal-content,#modal-background").toggleClass("active");
+  $(".quizArea").empty();
+  $(".questionArea h1").empty();
+    points++;
+};
+  
+var nextQuestion = function (){
+  $("#modal-content,#modal-background").toggleClass("active");
+  $.ajax({
+  type: "GET",
+  url: "../quizzes.json",
+  success: function(data) {
+    var take = data["level"+points+""];
 
-		//verify the data 
-		// console.log(picId + "===" + correctAnswer);
-		// if (picId === correctAnswer) {
-		// 	$('#popUp').find(".correct").removeClass("hide");
-		// 	points++; 
+    var answers = createAnswersFromData(take);
+    addAnswersToScreen(answers);
+  }
+});
+};
+$(".next").on('click', function(){
+  nextQuestion();
+});
 
-		// 	var totalPoints = $(".points").find("p").append(points);
-		// 	console.log("clicked");
-		// } else { 
-		// 	$('#popUp').find(".incorrect").removeClass("hide");
-		// }
-		// console.log("clicked"); 
+var wrongAnswerListener = function(){
+  $('#popUp').find(".incorrect").toggleClass("hide");
+}
 
-		$('#pictures').on("click", "picture" isCorrectAnswer);
-		$('#pictures').on("click", "picture" isWrongAnswer);
-		
-	});
-	*/
-	$('button').on('click', '.next', function(){
-		$.ajax('level1.html', { 
-			success: function(response) {
-			$('#level1').html(response).slideDown();
-	 		}
-		});
-	});
+var createAnswer = function(data){
+  return answers;
+}
 
+var addAnswersToScreen = function(answers) {
+  for (index in answers) {
+    if (answers[index].isCorrect) {
+      $(".questionArea").find("h2").text("This special piece is located at >> " + answers[index].location + " << ?")
+    }
+    var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
+    $('.quizArea').append(answer);
+  }
+    $('.level').append(level+1);
+    $('.points').append(lvlPt);
+
+}
+
+var createAnswersFromData = function(data) {
+    var randomAnswers = [];
+    var randomAnswer;
+    var randomIndex;
+
+    //want to grab the first random one and make that one isCorrect !!
+    //and then generate the questions along with that one !!
+
+    //1.  No duplicates 
+    //2.  add isCorrect !!
+    //3.  splicing used array object
+
+    do {
+      do {//generate random indicies 
+        randomIndex = Math.floor(Math.random() * data.length);
+        randomAnswer = data[randomIndex];
+        randomAnswer["isCorrect"] = false;
+      } while(randomAnswers.indexOf(randomAnswer) >= 0); //
+      randomAnswers.push(randomAnswer); //push random answer to array
+      //$('#gameLogic').find('.gameLogicContent').append("<img class='img-resize' src='" + randomAnswers[randomAnswers.length - 1].src + "'>");
+    } while(randomAnswers.length < 3);//
+
+    //after 3 places are generated, add isCorrect property to a random object
+    randomAnswers[Math.floor(Math.random() * randomAnswers.length)].isCorrect = true;
+    // $('#gameLogic').find('.gameLogicContent').append("<img src='" + answers[randomAnswers].src + "'>");
+    console.log(randomAnswers);
+    return randomAnswers;
+}
+
+$.ajax({
+  type: "GET",
+  url: "../quizzes.json",
+  success: function(data) {
+    var take = data["level"+level+""];
+    var answers = createAnswersFromData(take);
+    addAnswersToScreen(answers);
+  }
+});
 
 });

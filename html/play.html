@@ -1,67 +1,61 @@
-<!Doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src=""></script>
-    <link rel="stylesheet" href="css/evefy.css">
-	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link 
 </head>
 
 <body>
 	<header>
 		<div>
-			<a href="#home"> <img class='wayinthere' src="img/logo.jpg"> </a>	
+			<a href="index.html"> <img class='wayinthere' src="../img/logo.jpg"> </a>	
 		</div>	
 
 		<nav>
-		  <ul class='navigation'>
-		  	<li>
-		  		<a href="play.html"><div id="star12"></div></a>
-		  	</li>	
-			<li><a href="index.html"> Home</a></li>
-     		<li><a href="leader.html"> Leaderboard</a></li>
-      		<li><a href="submit.html"> Submit</a></li>
-      		<li><a href="contact.html"> Contact</a></li>
-      		<li><a href="login"> Login</a></li>
-      	  </ul>	
+			<ul class='navigation'>
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="leader.html"> Leaderboard</a></li>
+				<li><a href="submit.html"> Submit</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+			</ul>	
 		</nav>									     
 	</header>
+	<!--// var rand = answer[Math.floor(Math.random() * answer.length)];-->
 
-<section>
-	<div class="questions">
-		<h2>Which image is located at Beld Triangle Park?</h2>
-	</div>
-</section>	
-	<div id="pictures">
-			<img class="pics" src="img/img1.jpg" data-id="briewood">
-			<img class="pics" src="img/img2.jpg" data-id="btp">
-			<img class="pics" src="img/img3.jpg" data-id="wando">	
-	</div>		
-
-	<!-- <div class="answers">
-			<p class="answer1"></p>
-			<p class="answer2"></p>
-			<p class="answer3"></p>
-	</div> -->
-
-	<div id="popUp">
-		<ul>
-			<li class="correct"><h3>Yeah, you got that right!</h3></li>
-			<li class="incorrect"><h3>Maybe next time</h3></li>
-		</ul>
+	<div class="questionArea">
+		<h2></h2>
 	</div>
 
 
-	<div class="points">
-		<p> Points Go Here </p>
+	<div class="quizArea">
+		<h2></h2>
 	</div>
 
 
+	<div class="answers">
+
+	</div>
+
+
+	<div class="levelArea">
+		<span class="level">Level:</span>
+	</div>	
+
+
+	<div class="pointsArea">
+		<span class="points">Points:</span>
+	</div>
+	<div id="modal-background"></div>
+	<div id="modal-content">
+		<h1>You got it right! Way to go!</h1>
+		<button id="modal-close" class="next">Next!</button>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="js/jquery-2.1.4.min.js"></script>	
-	<script src="js/game.js"></script>    
-	</body>
+	<script src="../js/jquery-2.1.4.min.js"></script>	
+	<script src="../js/game.js"></script>
+	<!--<script src="js/gameLogic.js"></script> -->   
+</body>
 
 
 </html>
