@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
 var points = 0;
-var level = 0; 
+var level = 1; 
 var lvlPt = 0;
 
 
@@ -9,7 +9,9 @@ var correctAnswerListener = function() {
   $("#modal-content,#modal-background").toggleClass("active");
   $(".quizArea").empty();
   $(".questionArea h1").empty();
-    points++;
+  points = points + 5;
+  level++;
+  lvlPt++;
 };
   
 var nextQuestion = function (){
@@ -18,7 +20,7 @@ var nextQuestion = function (){
   type: "GET",
   url: "../quizzes.json",
   success: function(data) {
-    var take = data["level"+points+""];
+    var take = data["level"+lvlPt+""];
 
     var answers = createAnswersFromData(take);
     addAnswersToScreen(answers);
@@ -45,8 +47,8 @@ var addAnswersToScreen = function(answers) {
     var answer = $('<img>').attr('src', answers[index].src).on('click', answers[index].isCorrect ? correctAnswerListener : wrongAnswerListener);
     $('.quizArea').append(answer);
   }
-    $('.level').append(level+1);
-    $('.points').append(lvlPt);
+    $('.level').empty().append("Level: "+level);
+    $('.points').empty().append("Points: "+points);
 
 }
 
